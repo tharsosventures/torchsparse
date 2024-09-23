@@ -45,6 +45,9 @@ else:
     cuda_tag = "cpu"
 cuda_tag = cuda_tag.replace(".", "")
 
+print(__version__)
+print(torch_tag)
+print(cuda_tag)
 
 os.system(
     f"pip install --extra-index-url http://24.199.104.228/simple --trusted-host 24.199.104.228 torchsparse=={__version__}+{torch_tag}{cuda_tag} --force-reinstall"
